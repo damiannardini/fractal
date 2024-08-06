@@ -1,0 +1,58 @@
+.button {
+  background: linear-gradient(145deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  &:hover {
+    background: linear-gradient(145deg, #2575fc, #6a11cb);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+  }
+
+  &--primary {
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    color: rgb(196, 202, 228);
+  }
+
+  &--secondary {
+    background: linear-gradient(145deg, #ffdd57, #28a745);
+    color: white;
+  }
+
+  &--tertiary {
+    background: linear-gradient(145deg, #ff8d1a, #ff5733);
+    color: #fff;
+  }
+
+  &--small {
+    padding: 4px 12px;
+    .text {
+      font-size: 0.8rem;
+    }
+  }
+
+  &--normal {
+    padding: 8px 16px;
+    .text {
+      font-size: 1rem;
+    }
+  }
+
+  &--large {
+    padding: 10px 32px;
+    .text {
+      font-size: 1.2rem;
+    }
+  }
+}
