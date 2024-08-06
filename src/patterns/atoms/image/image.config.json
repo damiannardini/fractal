@@ -1,6 +1,6 @@
 {
   "context": {
-    "src": "../../../assets/img/image.png",
+    "src": "../../assets/img/image.png",
     "alt": "Imagen"
   }
 }
