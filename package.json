@@ -8,18 +8,20 @@
     "fs-extra": "^11.2.0",
     "replace-in-file": "^8.1.0"
   },
-
-      "scripts": {
-        "build:css": "node-sass src/scss/main.scss public/assets/css/main.css --no-source-map",
-        "build:js": "webpack --mode production",
-        "build": "npm run build:css && npm run build:js",
-        "watch:css": "node-sass --watch src/scss/main.scss public/assets/css/main.css",
-        "watch:js": "webpack --watch --mode development",
-        "copy-assets": "fractal copy-assets",
-        "start": "npm-run-all --parallel copy-assets build watch:css watch:js start:fractal",
-        "start:fractal": "concurrently \"fractal start --sync\" \" opn http://localhost:3001\"",
-        "build:fractal": "concurrently \"npm run start\" \"fractal build\" \"copy-assets\""
-      },
+  "scripts": {
+    "build:css": "node-sass src/scss/main.scss public/assets/css/main.css --no-source-map",
+    "build:js": "webpack --mode development",
+    "build:js-production": "webpack --mode production",
+    "build": "npm run build:css && npm run build:js",
+    "watch:css": "node-sass --watch src/scss/main.scss public/assets/css/main.css",
+    "watch:js": "webpack --watch --mode development",
+    "copy-assets": "fractal copy-assets",
+    "copy-assets-build": "fractal copy-assets-build",
+    "start": "npm-run-all --parallel copy-assets build watch:css watch:js start:fractal",
+    "start:build": "concurrently  \"npm run copy-assets-build\" \"npm run build:js-production\" \"npm run build:css\" \"npm run copy-assets-build\"",
+    "start:fractal": "concurrently \"fractal start --sync\" \" opn http://localhost:3001\"",
+    "build:fractal": "concurrently  \"fractal build\" \"npm run start:build\""
+  },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",

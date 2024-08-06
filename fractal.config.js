@@ -28,6 +28,18 @@ fractal.cli.command("copy-assets", (args, done) => {
   });
 });
 
+fractal.cli.command("copy-assets-build", (args, done) => {
+  const fs = require("fs-extra");
+  const sourcePath = path.join(__dirname, "src", "assets");
+  const destPath = path.join(__dirname, "build", "assets");
+
+  fs.copy(sourcePath, destPath, (err) => {
+    if (err) return console.error(err);
+    console.log("Assets copiados con éxito!");
+    done();
+  });
+});
+
 const defaultPort = 3001; // Cambia este valor al puerto que prefieras
 
 portfinder.basePort = defaultPort;
