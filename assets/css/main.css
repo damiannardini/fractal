@@ -1,0 +1,85 @@
+.button {
+  background: linear-gradient(145deg, #6a11cb, #2575fc);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase; }
+  .button:hover {
+    background: linear-gradient(145deg, #2575fc, #6a11cb);
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1); }
+  .button--primary {
+    background: linear-gradient(145deg, #6a11cb, #2575fc);
+    color: #c4cae4; }
+  .button--secondary {
+    background: linear-gradient(145deg, #ffdd57, #28a745);
+    color: white; }
+  .button--tertiary {
+    background: linear-gradient(145deg, #ff8d1a, #ff5733);
+    color: #fff; }
+  .button--small {
+    padding: 4px 12px; }
+    .button--small .text {
+      font-size: 0.8rem; }
+  .button--normal {
+    padding: 8px 16px; }
+    .button--normal .text {
+      font-size: 1rem; }
+  .button--large {
+    padding: 10px 32px; }
+    .button--large .text {
+      font-size: 1.2rem; }
+
+.text {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* Estilos generales del formulario */
+form {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 400px;
+  margin: 50px auto;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif; }
+
+form h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif; }
+
+form p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif; }
+
+/* Estilos para los grupos de formulario */
+.form-group {
+  margin-bottom: 20px; }
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #ff0000;
+  margin-bottom: 5px; }
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: all 0.3s ease; }
