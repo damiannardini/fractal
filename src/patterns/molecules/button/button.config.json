@@ -1,6 +1,7 @@
 {
   "title": "Botones",
   "status": "prototype",
+  "hidden": true,
   "display": {
     "align": "center",
     "padding": "40px",
@@ -12,43 +13,5 @@
     "text": "Button",
     "color": "primary",
     "size": "small"
-  },
-  "variants": [
-    {
-      "name": "primary",
-      "context": {
-        "color": "primary"
-      }
-    },
-    {
-      "name": "secondary",
-      "context": {
-        "color": "secondary"
-      }
-    },
-    {
-      "name": "tertiary",
-      "context": {
-        "color": "tertiary"
-      }
-    },
-    {
-      "name": "small",
-      "context": {
-        "size": "small"
-      }
-    },
-    {
-      "name": "normal",
-      "context": {
-        "size": "normal"
-      }
-    },
-    {
-      "name": "large",
-      "context": {
-        "size": "large"
-      }
-    }
-  ]
+  }
 }

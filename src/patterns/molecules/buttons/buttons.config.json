@@ -1,0 +1,39 @@
+{
+    "title": "Todos los botones",
+    "status": "prototype",
+    "context": {
+        "variants" : [
+            {
+                "text": "Button",
+                "color": "primary",
+                "size": "small"
+            },
+            {
+                "text": "Button 2",
+                "color": "secondary",
+                "size": "small"
+            },
+            {
+                "text": "Button 3",
+                "color": "tertiary",
+                "size": "small"
+            },
+            {
+                "text": "Button 4",
+                "color": "tertiary",
+                "size": "large"
+            },
+            {
+                "text": "Button 5",
+                "color": "tertiary",
+                "size": "large"
+            },
+            {
+                "text": "Button 6",
+                "color": "tertiary",
+                "size": "large"
+            }
+        ]
+
+    }
+}
