@@ -16,12 +16,13 @@
     "watch:js": "webpack --watch --mode development",
     "copy-assets": "fractal copy-assets",
     "start": "npm-run-all --parallel copy-assets build watch:css watch:js start:fractal",
-    "start:fractal": "concurrently \"fractal start --sync\" \" opn http://localhost:3000\"",
+    "start:fractal": "concurrently \"fractal start --sync\" \" opn http://localhost:3001\"",
     "build:fractal": "fractal build"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.3",
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "autoprefixer": "^10.4.19",
     "babel-loader": "^9.1.3",
     "concurrently": "^8.2.2",
@@ -29,6 +30,7 @@
     "node-sass": "^9.0.0",
     "npm-run-all": "^4.1.5",
     "opn-cli": "^4.1.0",
+    "portfinder": "^1.0.32",
     "postcss": "^8.4.40",
     "postcss-cli": "^11.0.0",
     "sass": "^1.77.8",
