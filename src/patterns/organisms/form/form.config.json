@@ -1,0 +1,12 @@
+{
+  "context": {
+    "title": "Formulario",
+    "subtitle": "Inscríbase aquí",
+    "nameLabel": "Nombre",
+    "button": {
+      "text": "submit",
+      "color": "primary",
+      "size": "large"
+    }
+  }
+}
