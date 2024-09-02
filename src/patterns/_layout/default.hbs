@@ -8,9 +8,82 @@
 </head>
 
 <body>
-
     {{{ yield }}}
     <script src="{{ path '../../assets/js/bundle.js' }}"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttonElements = `
+            <div class="bar-buttons">
+           <button id="desktop-view" class="bar-buttons__btn">Desktop</button>
+           <button id="tablet-view" class="bar-buttons__btn">Tablet</button>
+           <button id="mobile-view" class="bar-buttons__btn">Mobile</button>
+           </div>
+         `;
+            const iframe = window.frameElement;
+            if (iframe) {
+                const previewWrapper = iframe.closest(".Preview-wrapper");
+                const preview = iframe.closest(".Preview");
+                const header = iframe.closest(".Pen");
+                const infoBar = header.querySelector(".Pen-panel");
+                previewWrapper.style.transition = "width 0.3s ease-in-out";
+                previewWrapper.style.left = "auto";
+                previewWrapper.style.right = "auto";
+                preview.style.display = "flex";
+                preview.style.justifyContent = "center";
+
+                if (infoBar) {
+                    infoBar.innerHTML += buttonElements;
+                    
+                    const barButtons = infoBar.querySelector(".bar-buttons");
+                    barButtons.style.display = "flex";
+                    barButtons.style.justifyContent = "center";
+                    barButtons.style.gap = "10px";
+                    barButtons.style.marginLeft = "20px";
+                    barButtons.style.border = "1px solid #14f";
+                    barButtons.style.borderRadius = "1000px";
+                    barButtons.style.padding = "6px 16px";
+                    const desktopButton = infoBar.querySelector("#desktop-view");
+                    const tabletButton = infoBar.querySelector("#tablet-view");
+                    const mobileButton = infoBar.querySelector("#mobile-view");
+                    
+                    desktopButtons = [desktopButton, tabletButton, mobileButton];
+                    desktopButtons.forEach(button => {
+                        button.addEventListener("click", function (e) {
+                            desktopButtons.forEach(button => {
+                                button.classList.remove("active");
+                                button.style.outline = "none";
+                                button.style.borderBottom = "none";
+                                button.style.fontWeight = "normal";
+                            });
+                            e.target.classList.add("active");
+                            e.target.style.borderBottom = "2px solid #14f";
+                            e.target.style.fontWeight = "bold";
+                            const buttonId = e.target.id;
+                            switch (buttonId) {
+                                case "desktop-view":
+                                    previewWrapper.style.width = "100%";
+                                    
+                                    break;
+                                case "tablet-view":
+                                    previewWrapper.style.width = "768px";
+                                    
+                                    break;
+                                case "mobile-view":
+                                    previewWrapper.style.width = "320px";
+                                    
+                                    break;
+                                default:
+                                    console.error("error");
+                            }
+                        });
+                    });
+
+                }
+            }
+        });
+
+    </script>
 </body>
 
 </html>

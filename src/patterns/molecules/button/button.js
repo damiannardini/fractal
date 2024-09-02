@@ -1,9 +1,11 @@
-const { title } = require('./button.config.json');
+const { context } = require('./button.config.json');
 
 const button = () => {
-  document.querySelector(".button").addEventListener("click", () => {
-    alert(title);
-  });
+  document.querySelectorAll(".button").forEach((btn)=>{
+    btn.addEventListener("click", () => {
+      alert(`${context.text} clicked`);
+    });
+  })
 };
 
 export default button;

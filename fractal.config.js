@@ -40,15 +40,20 @@ fractal.cli.command("copy-assets-build", (args, done) => {
   });
 });
 
-const defaultPort = 3001; // Cambia este valor al puerto que prefieras
+const defaultPort = 3001;
 
 portfinder.basePort = defaultPort;
 portfinder
   .getPortPromise()
   .then((port) => {
     fractal.web.set("server.port", port);
-    console.log(`Fractal will run on port ${port}`);
+    console.log(`Fractal se ejecutará en el puerto ${port}`);
+    
+    // Agregamos esta línea para abrir el navegador
+    require('opn')(`http://localhost:${port}`);
   })
   .catch((err) => {
-    console.error("No free port found", err);
+    console.error("No se encontró un puerto libre", err);
   });
+
+
